@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5 {
 /* Your code starts here! */
 body {
 	margin: 0 auto;
-	width: 600px;
+	max-width: 600px;
 }
 nav {
 	display: flex;
@@ -79,11 +79,26 @@ nav a{
 	padding: 15px;
 	font-size: 12px;
 }
+@media(max-width: 500px) {
+	nav {
+		flex-direction: column;
+	}
+	nav a {
+		text-align: center;
+		border: 1px solid grey;
+	}
+}
 .logo {
 	display: flex;
 	align-self: center;
 	width: 100px;
 	height: 20px;
+}
+@media(max-width: 500px) {
+	.logo {
+		align-self: center;
+		order: 0;
+	}
 }
 .tagline-container {
 	margin: 20px 0px 40px 0px;
@@ -93,22 +108,70 @@ nav a{
 	height: 300px;
 }
 .tagline {
-	font-size: 45px;
+	font-size: 60px;
 	padding: 40px;
 	text-align: center;
+}
+@media(max-width: 800px) {
+	.tagline-container {
+		justify-content: center;
+	}
+	.tagline {
+		align-content: center;
+	}
+}
+@media(max-width: 500px) {
+	.taglin-container {
+		justify-content: center;
+	}
+	.tagline {
+		padding-bottom: 5px;
+	}
 }
 .code-image {
 	width: 250px;
 	height: 250px;	
 }
+@media(max-width: 800px) {
+	.code-image {
+		display: none;
+	}
+}
+@media(max-width: 500px) {
+	.code-image {
+		display: none;
+	}
+}
 button {
 	margin: 0;
 	display: block;
-	margin: -151px 0px 110px 81px;
+	margin: -120px 0px 110px 110px;
 	width: 100px;
+}
+@media(max-width: 800px) {
+	button {
+		margin-left: 40%;
+		width: 120px;
+	}
+}
+@media(max-width: 500px) {
+	button {
+		margin-left: 39%;
+	}
 }
 .text-container {
 	display: flex;
+}
+@media(max-width: 800px) {
+	.text-container {
+		padding: 10px;
+	}
+}
+@media(max-width: 500px) {
+	.text-container {
+		flex-direction: column;
+		padding: 10px;
+	}
 }
 .features {
 	width: 280px;
@@ -117,15 +180,47 @@ button {
 .about {
 	width: 280px;
 }
+@media(max-width: 500px) {
+	.features {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+	.about {
+		width: 100%;
+	}
+}
 .middle-img {
 	margin: 30px 0px 30px 0px;
 	width: 100%;
+}
+@media(max-width: 800px) {
+	.middle-img {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+@media(max-width: 500px) {
+	.middle-img {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 .content-container2 {
 	border-bottom: 1px solid black;
 }
 .text-container2 {
 	display: flex;
+}
+@media(max-width: 800px) {
+	.text-container2 {
+		padding: 10px;
+	}
+}
+@media(max-width: 500px) {
+	.text-container2 {
+		flex-direction: column;
+		padding: 10px;
+	}
 }
 .services {
 	width: 30%;
@@ -139,6 +234,17 @@ button {
 	width: 30%;
 	margin: 0px 0px 30px 0px;
 }
+@media(max-width: 500px) {
+	.services {
+		width: 100%;
+	}
+	.product {
+		width: 100%;
+	}
+	.vision {
+		width: 100%;
+	}
+}
 .address {
 	margin-bottom: 15px;
 }
@@ -148,8 +254,17 @@ button {
 address {
 	margin: 30px 0px 30px 0px;
 }
+@media(max-width: 800px) {
+	address {
+		padding-left: 10px;
+	}
+}
+@media(max-width: 500px) {
+	address {
+		padding-left: 10px;
+	}
+}
 footer {
 	text-align: center;
 	font-size: 12px;
 }
-
