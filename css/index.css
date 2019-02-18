@@ -69,8 +69,11 @@ body {
 	margin: 0 auto;
 	max-width: 600px;
 }
-nav {
+.container {
 	display: flex;
+	justify-content: space-between;
+}
+nav {
 	justify-content: space-between;
 }
 nav a{
@@ -79,13 +82,20 @@ nav a{
 	padding: 15px;
 	font-size: 12px;
 }
+@media(max-width: 800px) {
+	.container {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
 @media(max-width: 500px) {
 	nav {
-		flex-direction: column;
+		text-align: center;
+		width: 100%;
 	}
 	nav a {
-		text-align: center;
-		border: 1px solid grey;
+		border: 1px solid black;
+		display: block;
 	}
 }
 .logo {
@@ -97,7 +107,7 @@ nav a{
 @media(max-width: 500px) {
 	.logo {
 		align-self: center;
-		order: 0;
+		margin: 10px 0px 10px 0px;
 	}
 }
 .tagline-container {
@@ -156,7 +166,7 @@ button {
 }
 @media(max-width: 500px) {
 	button {
-		margin-left: 39%;
+		margin-left: 35%;
 	}
 }
 .text-container {
